@@ -9,7 +9,7 @@ import {
   Outfit, Expr, FrontOpts, SideOpts,
 } from "./toon";
 import {
-  FPS, D0, SHOTS, smooth, clamp01, T_LOST, T_ATTACK, T_HURT, T_HANGED, T_GLOVE, T_RECEIPT, T_LOST2, T_WALK0, T_WALK1,
+  FPS, D0, SHOTS, smooth, clamp01, T_LOST, T_ATTACK, T_HURT, T_CHARGE, T_BITE, T_HANGED, T_GLOVE, T_RECEIPT, T_LOST2, T_WALK0, T_WALK1,
   T_BRUTAL, DOCK, JUDGE, TABLE, GALLOWS, sowWalk, walkX, WALK_Z, WALK_T0,
 } from "./story";
 import { drawBeast, Beast, BeastFace } from "./beasts";
@@ -246,7 +246,7 @@ const talk = (t: number, i: number, set: Expr[] = TALK) => set[Math.floor(t * 7 
 
 /** an animal card: side view facing its walking direction (dir), lit from the scene's sun, with a contact shadow */
 const beast = (cam: CamInfo, out: Stage, kind: Beast, i: number, x: number, z: number, dir: [number, number] | null,
-  o: { walk?: boolean; phase?: number; face?: BeastFace; blink?: number; headDip?: number }, scale = 1, y = D0) => {
+  o: { walk?: boolean; phase?: number; face?: BeastFace; blink?: number; headDip?: number; bite?: number }, scale = 1, y = D0) => {
   const d = cam.pos.distanceTo(tmp.set(x, y + 0.6, z)) / scale;
   const [w, h, k] = tier(d);
   const mirror = dir ? dir[0] * cam.right.x + dir[1] * cam.right.z < 0 : i % 2 === 1;
@@ -341,22 +341,47 @@ const hook = (cam: CamInfo, t: number, out: Stage) => {
   judge(cam, t, out, t >= T_LOST - LEAD ? "stern" : talk(t, 0, ["stern", "pained"]), "scroll");
   guard(cam, t, out, -1.8, 15.9);
   spectators(cam, t, out, t >= T_LOST ? "shock" : "murmur");
-  burst(out, t, T_LOST, 0, 2.5, 22.3, 3.4);
 };
-/** S3 the square: the sow, townsfolk around; on "attacked" they jump back in shock, the mother is left grieving */
-const STREET: [number, number][] = [[-8.4, -3.0], [-2.6, -7.2], [-9.4, -6.6], [-1.8, -3.4], [-6.8, -2.0], [-4.2, -8.8]];
+/** S3 the square: a child plays, the sow charges in from the left, rams the child over and bites; the townsfolk
+ *  behind jump back in shock, the mother runs to the child. Nothing graphic: a cartoon tumble, jaws and reactions. */
+const STREET: [number, number][] = [[-7.6, -2.4], [-2.2, -2.8], [-6.4, -1.4], [-3.1, -1.7], [-5.1, -1.0], [-8.6, -0.8]];
+const KID_O: Outfit = { ...KID, jacket: "#c9893a", pants: "#5b4a3a", boots: "#4a3426", hat: "hair", hair: "#7a4a2a", skin: "#ffe2c2" };
+const CX = -4.55, CZ = -6.0;          // the child
+const P0 = -6.45, PHIT = -5.33, PBITE = -4.83, PZ = -6.12; // the sow: start, contact, biting the leg (a little nearer the camera)
 const street = (cam: CamInfo, t: number, out: Stage) => {
-  const sx = -6, sz = -6, after = t >= T_ATTACK - LEAD;
-  beast(cam, out, "pig", 0, sx, sz, [1, 0], { face: after ? "neutral" : "content", blink: lidAt(t, 1) });
+  const after = t >= T_ATTACK - LEAD;
+  // ---- the sow ----
+  let px = P0, walk = false, phase = 0, face: BeastFace = "angry", bite = 0, dip = 0;
+  if (t < T_CHARGE) { dip = 6 + 6 * Math.sin(t * 9); }                                    // head down, ready to charge
+  else if (t < T_ATTACK) { const u = (t - T_CHARGE) / (T_ATTACK - T_CHARGE); px = P0 + (PHIT - P0) * u * u; walk = true; phase = (t * 4.2) % 1; dip = 14; }
+  else if (t < T_BITE - 0.12) { px = PHIT + (PBITE - PHIT) * smooth((t - T_ATTACK) / 0.3); dip = 10; }
+  else if (t < T_HURT - 0.2) {                                                             // two chomps on the leg
+    px = PBITE; const k = (t - (T_BITE - 0.12)) * 4.2; bite = Math.max(0, Math.sin(k * Math.PI)); dip = 12 + 10 * bite;
+  } else { px = PBITE - 0.55 * smooth((t - (T_HURT - 0.2)) / 0.6); face = "neutral"; walk = t < T_HURT + 0.35; phase = (t * 2.4) % 1; }
+  beast(cam, out, "pig", 0, px, PZ, [1, 0], { face, walk, phase, bite, headDip: dip, blink: face === "angry" ? 0 : lidAt(t, 1) });
+  // ---- the child: plays, is rammed over (rolls about the feet), lies hurt ----
+  const kw = who(630, KID_O, "kid");
+  if (!after) {
+    const hop = Math.max(0, Math.sin(t * 7.5)) * 0.06;                                      // skipping on the spot
+    out.places.push(person(cam, kw, CX, D0 + hop, CZ, { side: false, mirror: false }, { mode: "stand", expr: "smile", blink: lidAt(t, 630) }, {}));
+    blob(out, CX, D0, CZ, 0.7);
+  } else {
+    const u = clamp01((t - T_ATTACK) / 0.32), air = Math.sin(u * Math.PI) * 0.22;
+    const roll = 1.32 * smooth(u), kx = CX + 0.22 * smooth(u); // tips away from the sow (screen-left), feet by her snout
+    const expr: Expr = t < T_ATTACK + 0.5 ? "shock" : t < T_HURT ? "pained" : "dazed";
+    const pl = person(cam, kw, kx, D0 + air + 0.02, CZ, { side: false, mirror: false }, { mode: u < 1 ? "fall" : "stand", expr, blink: t > T_HURT ? 1 : 0 }, {});
+    out.places.push({ ...pl, roll });
+  }
+  // ---- townsfolk behind ----
   STREET.forEach(([x, z], i) => {
-    const back = smooth((t - T_ATTACK) / 0.35) * 0.45, dx = x - sx, dz = z - sz, n = Math.hypot(dx, dz) || 1;
+    const back = smooth((t - T_ATTACK) / 0.35) * 0.4;
     const hop = t > T_ATTACK && t < T_ATTACK + 0.3 ? Math.sin(((t - T_ATTACK) / 0.3) * Math.PI) * 0.12 : 0;
     const expr: Expr = !after ? (["smile", "neutral", "grin", "neutral", "smile_closed", "neutral"] as Expr[])[i] : t < T_ATTACK + 1.4 ? "shock" : "nervous";
-    stand(cam, out, who(600 + i, PEASANT(i), `p${i}`), x + (dx / n) * back, z + (dz / n) * back, { mode: "stand", expr, blink: lidAt(t, 600 + i, SWAPS[3]) }, D0 + hop);
+    stand(cam, out, who(600 + i, PEASANT(i), `p${i}`), x, z + back, { mode: "stand", expr, blink: lidAt(t, 600 + i, SWAPS[3]) }, D0 + hop);
   });
+  // ---- the mother runs in from the right and stands over her child ----
   const mExpr: Expr = !after ? "smile" : t < T_HURT - LEAD ? "shock" : "pained";
-  stand(cam, out, who(620, MOTHER_O, "mother"), -3.7, -4.5, { mode: "stand", expr: mExpr, blink: lidAt(t, 620, SWAPS[3]), facing: -1 });
-  burst(out, t, T_ATTACK, sx + 0.2, 1.0, sz, 2.6);
+  walker(cam, out, who(620, MOTHER_O, "mother"), t, [-1.7, -4.7], [-2.85, -5.6], T_ATTACK + 0.6, T_HURT + 0.3, mExpr);
 };
 /** S4 the hall: a guard walks the sow to the dock, the judge waits, the benches murmur */
 const enter = (cam: CamInfo, t: number, out: Stage) => {

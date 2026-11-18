@@ -5,8 +5,8 @@ import { Pen, INK, mul } from "./toon";
 
 type P2 = [number, number];
 export type Beast = "pig" | "goat" | "cow";
-export type BeastFace = "neutral" | "nervous" | "shock" | "sad" | "content";
-export type BeastOpts = { phase?: number; walk?: boolean; face?: BeastFace; blink?: number; light?: number; headDip?: number };
+export type BeastFace = "neutral" | "nervous" | "shock" | "sad" | "content" | "angry";
+export type BeastOpts = { phase?: number; walk?: boolean; face?: BeastFace; blink?: number; light?: number; headDip?: number; bite?: number };
 
 const SH: [number, number, number] = [0.8, 0.74, 0.82];
 const WHITE = "#ffffff";
@@ -43,7 +43,7 @@ const SPEC: Record<Beast, Spec> = {
 
 /** one animal on its card. walk: legs swing on `phase` (0..1 per stride); face: eye + mouth acting */
 export const drawBeast = (p: Pen, kind: Beast, o: BeastOpts) => {
-  const { phase = 0, walk = false, face = "neutral", blink = 0, light = (-120 * Math.PI) / 180, headDip = 0 } = o;
+  const { phase = 0, walk = false, face = "neutral", blink = 0, light = (-120 * Math.PI) / 180, headDip = 0, bite = 0 } = o;
   const S = SPEC[kind], ow = 10, two = Math.PI * 2, sole = 972;
   const bob = walk ? 6 * Math.cos(2 * two * phase) : 0;
   const [bx, by0, brx, bry] = S.body, by = by0 + bob;
@@ -119,10 +119,21 @@ export const drawBeast = (p: Pen, kind: Beast, o: BeastOpts) => {
     // brow: worried / sad slant up toward the middle of the face, nervous adds a sweat drop
     if (face === "sad" || face === "nervous") p.stroke([[ex - 16, ey - 30], [ex + 14, ey - 38]], 6);
     if (face === "nervous") p.ell(hx - hrx * 0.7, hy - hry * 0.9, 7, 12, "#9fd4ff", 4);
+    if (face === "angry") p.stroke([[ex - 18, ey - 36], [ex + 16, ey - 20]], 8); // brow slants down to the snout
   }
   // mouth
   const mx = kind === "pig" ? hx + 52 : kind === "goat" ? hx + 40 : hx + 22, my = kind === "pig" ? hy + 64 : kind === "goat" ? hy + 58 : hy + hry * 0.92;
-  if (face === "shock") p.ell(mx, my + 4, 9, 12, "#5a1e28", 5);
+  if (bite > 0.05 && kind === "pig") {
+    // open jaws under the snout: dark mouth, two rows of little white teeth
+    const o2 = 34 * bite, jx = hx + 40, jy = hy + 46;
+    p.poly([[jx - 30, jy], [jx + 68, jy - 4], [jx + 62, jy + o2 * 0.4], [jx + 50, jy + 8 + o2], [jx - 22, jy + 10 + o2 * 0.5]], "#5a1e28", 6);
+    for (let k = 0; k < 4; k++) {
+      const tx = jx - 8 + k * 18;
+      p.poly([[tx, jy + 1], [tx + 12, jy + 1], [tx + 6, jy + 13]], WHITE, 3);
+      p.poly([[tx + 2, jy + 9 + o2 * 0.8], [tx + 14, jy + 9 + o2 * 0.8], [tx + 8, jy - 3 + o2 * 0.8]], WHITE, 3);
+    }
+  } else if (face === "shock") p.ell(mx, my + 4, 9, 12, "#5a1e28", 5);
+  else if (face === "angry") p.stroke([[mx - 12, my + 2], [mx + 8, my - 4]], 6);
   else if (face === "sad") p.arc(mx, my + 10, 12, 7, 200, 340, 5);
   else if (face === "content") p.arc(mx, my - 4, 12, 7, 20, 160, 5);
   else p.stroke([[mx - 10, my], [mx + 8, my - 2]], 5);

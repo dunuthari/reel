@@ -144,7 +144,7 @@ export class World {
 
     // ---- ground: grass everywhere, cobbles in the square and the lanes ----
     const b = new Batch();
-    b.add(quadUp(-900, 900, -900, 900, 450, 450), M.grass);
+    b.add(quadUp(-900, 900, -900, 900, 450, 450, D0 - 0.08), M.grass); // 8 cm under the cobbles: no depth fight in the 16-bit depth buffer
     b.add(quadUp(-32, 32, -36, 30, 16, 16.5, D0 + 0.012), M.cobble);
     b.add(quadUp(-4, 4, -140, -36, 2, 26, D0 + 0.011), M.cobble);
     b.add(quadUp(32, 140, -8, 0, 27, 2, D0 + 0.011), M.cobble);

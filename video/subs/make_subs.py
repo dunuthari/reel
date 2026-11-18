@@ -30,11 +30,17 @@ while i < len(words) - 1:
         del words[i+1]
     i += 1
 
-# chunks of up to 3 words, break at sentence ends and after commas
+# chunks of up to 3 words that fit the frame: measured in the real font (uppercase, 110 px, 10 px outline, 112 % pop)
+from PIL import ImageFont
+FONT = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", 110)
+MAXW = 820  # 1080 frame - 2 x 50 margins, less the pop-in scale and outline
+width = lambda ws: FONT.getlength(" ".join(x["w"].upper() for x in ws)) + 20
 chunks, cur = [], []
 for w in words:
+    if cur and width(cur + [w]) > MAXW:
+        chunks.append(cur); cur = []
     cur.append(w)
-    if w["end_sent"] or w["w"][-1] in ",;:" or len(cur) == 3 or len(" ".join(x["w"] for x in cur)) > 14:
+    if w["end_sent"] or w["w"][-1] in ",;:" or len(cur) == 3:
         chunks.append(cur); cur = []
 if cur: chunks.append(cur)
 
@@ -64,7 +70,9 @@ for ci, ch in enumerate(chunks):
     for wi, w in enumerate(ch):
         s = w["s"]; e = ch[wi + 1]["s"] if wi + 1 < len(ch) else cend
         txt = " ".join((YEL + x["w"].upper() + WHT) if j == wi else x["w"].upper() for j, x in enumerate(ch))
-        pop = r"{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}" if wi == 0 else ""
+        fit = min(1.0, MAXW / width(ch))  # a single very long word shrinks to fit
+        fs = rf"{{\fs{round(110 * fit)}}}" if fit < 1 else ""
+        pop = fs + (r"{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}" if wi == 0 else "")
         ev.append(f"Dialogue: 0,{ts(s)},{ts(e)},Cap,,0,0,0,,{pop}{txt}")
 open(out, "w").write(hdr + "\n".join(ev) + "\n")
 # plain SRT too

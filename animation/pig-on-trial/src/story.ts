@@ -26,6 +26,8 @@ export const easeOut = (u: number) => 1 - (1 - clamp01(u)) ** 4;
 export const T_LOST = 4.5;      // "lost"
 export const T_ATTACK = 8.1;    // "attacked"
 export const T_HURT = 9.9;      // "badly hurt"
+export const T_CHARGE = 7.62;  // the sow starts her charge
+export const T_BITE = 8.55;    // first bite
 export const T_WALK0 = 12.3, T_WALK1 = 15.9; // the guard walks the sow to the dock
 export const T_BRUTAL = 18.3;   // "brutal"
 export const T_HANGED = 22.55;  // "hanged"
@@ -64,7 +66,7 @@ export const SHOTS: ShotDef[] = [
 ];
 /** crossfades (frames) where the time of day changes; everything else is a cut on a moving camera */
 export const XFADE: Record<number, number> = { 10: 12, 13: 10 };
-export const FLASH_AT = 150;
+export const FLASH_AT = -1000; // no white flash
 export const shotAt = (f: number) => SHOTS.find((s) => f >= s.a && f < s.b) ?? SHOTS[SHOTS.length - 1];
 export const layersAt = (f: number): { id: number; alpha: number }[] => {
   for (const s of SHOTS) {
@@ -130,8 +132,9 @@ const CAMS: Record<number, Key[]> = {
   ],
   // the square: the sow among the townsfolk; on "attacked" they jump back, then a slow push in on the mother
   3: [
-    { f: 226, s: (f) => drift({ pos: [-0.6, 1.4, -15.2], look: [-5.2, 1.0, -5.8], fov: 40, roll: -0.02 }, f, 226, -0.012) },
-    { f: 292, dur: 64, s: (f) => dolly([-2.8, 1.45, -11.6], [-4.4, 1.2, -4.8], f, 292, 0.002, { fov: 36, roll: 0.02 }) },
+    { f: 226, s: (f) => dolly([-5.45, 1.0, -13.0], [-5.45, 0.72, -6.0], f, 226, 0.0015, { fov: 40, roll: -0.02 }) },
+    { f: 241, dur: 14, s: (f) => dolly([-3.9, 0.62, -10.6], [-3.9, 0.42, -6.0], f, 241, 0.002, { fov: 34, roll: 0.025 }) },
+    { f: 292, dur: 54, s: (f) => dolly([-3.75, 1.05, -11.8], [-3.75, 0.62, -6.0], f, 292, 0.0022, { fov: 38, roll: -0.015 }) },
   ],
   // crane from the square into the hall while the guard walks the sow to the dock
   4: [
@@ -140,7 +143,7 @@ const CAMS: Record<number, Key[]> = {
   ],
   // the judge reads the sentence from his scroll; slow drift and zoom
   5: [
-    { f: 520, s: (f) => drift(dolly([1.1, 2.25, 18.6], [0, 2.3, 23.6], f, 520, 0.0026, { fov: 36, roll: 0.02 }), f, 520, -0.012) },
+    { f: 520, s: (f) => { const u = glide((f - 520) / 128); return dolly([1.1 - 0.8 * u, 2.25, 18.6], [0, 2.25, JUDGE[2]], f, 520, 0.0018, { fov: 36, roll: 0.02 - 0.03 * u }); } },
   ],
   // the sow's face on "hanged": quick push in, impact kick
   6: [
@@ -182,7 +185,7 @@ const CAMS: Record<number, Key[]> = {
   ],
 };
 /** impact kicks: flip sign every frame, decay over 7 frames */
-const KICKS = [T_LOST, T_ATTACK, T_HANGED];
+const KICKS = [T_LOST, T_ATTACK, T_BITE, T_HANGED];
 export const kickAt = (t: number) => {
   for (const k of KICKS) { const n = Math.round((t - k) * FPS); if (n >= 0 && n < 7) return (n % 2 ? -1 : 1) * (1 - n / 7); }
   return 0;
@@ -202,8 +205,9 @@ export const DOF: Dof[] = [
   { f: 0, cInf: 13, focus: () => [-0.2, 0.6, 16.5] },
   { f: 52, dur: 50, cInf: 8, focus: () => [0, 2.5, 23.6] },
   { f: 153, cInf: 0 },
-  { f: 226, cInf: 10, focus: () => [-5.6, 0.7, -5.8] },
-  { f: 292, dur: 40, cInf: 12, focus: () => [-4.0, 1.5, -4.6] },
+  { f: 226, cInf: 10, focus: () => [-5.2, 0.6, -6.0] },
+  { f: 241, dur: 14, cInf: 13, focus: () => [-4.3, 0.4, -6.0] },
+  { f: 292, dur: 40, cInf: 11, focus: () => [-3.9, 0.6, -5.9] },
   { f: 357, cInf: 6, focus: (f) => { const s = sowWalk(f / FPS); return [s.x, 0.7, s.z]; } },
   { f: 520, cInf: 12, focus: () => [0, 2.5, 23.6] },
   { f: 648, cInf: 14, focus: () => [-0.35, 0.58, 16.45] },
