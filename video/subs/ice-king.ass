@@ -1,0 +1,221 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter ExtraBold,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,-1,0,0,0,100,100,0,0,1,10,4,2,50,50,560,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.21,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IN{\c&HFFFFFF&} 1806,
+Dialogue: 0,0:00:00.21,0:00:01.04,Cap,,0,0,0,,IN {\c&H2BD7FF&}1806,{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.04,0:00:01.25,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}A{\c&HFFFFFF&} BOSTON
+Dialogue: 0,0:00:01.25,0:00:01.62,Cap,,0,0,0,,A {\c&H2BD7FF&}BOSTON{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.62,0:00:02.14,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}NEWSPAPER{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.14,0:00:02.51,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}PRINTED{\c&HFFFFFF&} A
+Dialogue: 0,0:00:02.51,0:00:02.72,Cap,,0,0,0,,PRINTED {\c&H2BD7FF&}A{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.72,0:00:03.09,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}STORY{\c&HFFFFFF&} THAT
+Dialogue: 0,0:00:03.09,0:00:03.30,Cap,,0,0,0,,STORY {\c&H2BD7FF&}THAT{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.30,0:00:03.67,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}BEGAN{\c&HFFFFFF&} WITH
+Dialogue: 0,0:00:03.67,0:00:03.89,Cap,,0,0,0,,BEGAN {\c&H2BD7FF&}WITH{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.89,0:00:04.10,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TWO{\c&HFFFFFF&} WORDS.
+Dialogue: 0,0:00:04.10,0:00:04.45,Cap,,0,0,0,,TWO {\c&H2BD7FF&}WORDS.{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.45,0:00:04.81,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}NO{\c&HFFFFFF&} JOKE.
+Dialogue: 0,0:00:04.81,0:00:05.50,Cap,,0,0,0,,NO {\c&H2BD7FF&}JOKE.{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.50,0:00:05.69,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}A{\c&HFFFFFF&} YOUNG
+Dialogue: 0,0:00:05.69,0:00:05.88,Cap,,0,0,0,,A {\c&H2BD7FF&}YOUNG{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.88,0:00:06.07,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}MAN{\c&HFFFFFF&} NAMED
+Dialogue: 0,0:00:06.07,0:00:06.40,Cap,,0,0,0,,MAN {\c&H2BD7FF&}NAMED{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.40,0:00:06.88,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}FREDERIC{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.88,0:00:07.21,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TUDOR{\c&HFFFFFF&} HAD
+Dialogue: 0,0:00:07.21,0:00:07.40,Cap,,0,0,0,,TUDOR {\c&H2BD7FF&}HAD{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.40,0:00:07.74,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}FILLED{\c&HFFFFFF&} A SHIP
+Dialogue: 0,0:00:07.74,0:00:07.93,Cap,,0,0,0,,FILLED {\c&H2BD7FF&}A{\c&HFFFFFF&} SHIP
+Dialogue: 0,0:00:07.93,0:00:08.12,Cap,,0,0,0,,FILLED A {\c&H2BD7FF&}SHIP{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.12,0:00:08.31,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}WITH{\c&HFFFFFF&} ICE.
+Dialogue: 0,0:00:08.31,0:00:08.64,Cap,,0,0,0,,WITH {\c&H2BD7FF&}ICE.{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.64,0:00:08.91,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}REAL{\c&HFFFFFF&} ICE,
+Dialogue: 0,0:00:08.91,0:00:09.35,Cap,,0,0,0,,REAL {\c&H2BD7FF&}ICE,{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.35,0:00:09.61,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}CUT{\c&HFFFFFF&} FROM
+Dialogue: 0,0:00:09.61,0:00:09.88,Cap,,0,0,0,,CUT {\c&H2BD7FF&}FROM{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.88,0:00:10.34,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}FROZEN{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.34,0:00:10.74,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}PONDS.{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.74,0:00:10.92,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AND{\c&HFFFFFF&} HE WAS
+Dialogue: 0,0:00:10.92,0:00:11.09,Cap,,0,0,0,,AND {\c&H2BD7FF&}HE{\c&HFFFFFF&} WAS
+Dialogue: 0,0:00:11.09,0:00:11.27,Cap,,0,0,0,,AND HE {\c&H2BD7FF&}WAS{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.27,0:00:11.58,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SENDING{\c&HFFFFFF&} IT
+Dialogue: 0,0:00:11.58,0:00:11.75,Cap,,0,0,0,,SENDING {\c&H2BD7FF&}IT{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.75,0:00:11.93,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TO{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.93,0:00:12.48,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}MARTINIQUE,{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.48,0:00:12.66,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}A{\c&HFFFFFF&} HOT ISLAND
+Dialogue: 0,0:00:12.66,0:00:12.84,Cap,,0,0,0,,A {\c&H2BD7FF&}HOT{\c&HFFFFFF&} ISLAND
+Dialogue: 0,0:00:12.84,0:00:13.14,Cap,,0,0,0,,A HOT {\c&H2BD7FF&}ISLAND{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.14,0:00:13.32,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IN{\c&HFFFFFF&} THE
+Dialogue: 0,0:00:13.32,0:00:13.50,Cap,,0,0,0,,IN {\c&H2BD7FF&}THE{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.50,0:00:14.26,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}CARIBBEAN.{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.26,0:00:14.42,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}THE{\c&HFFFFFF&} PAPER
+Dialogue: 0,0:00:14.42,0:00:14.70,Cap,,0,0,0,,THE {\c&H2BD7FF&}PAPER{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.70,0:00:14.99,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HOPED{\c&HFFFFFF&} IT
+Dialogue: 0,0:00:14.99,0:00:15.15,Cap,,0,0,0,,HOPED {\c&H2BD7FF&}IT{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.15,0:00:15.31,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}WOULD{\c&HFFFFFF&} NOT
+Dialogue: 0,0:00:15.31,0:00:15.48,Cap,,0,0,0,,WOULD {\c&H2BD7FF&}NOT{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.48,0:00:15.64,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TURN{\c&HFFFFFF&} OUT TO
+Dialogue: 0,0:00:15.64,0:00:15.80,Cap,,0,0,0,,TURN {\c&H2BD7FF&}OUT{\c&HFFFFFF&} TO
+Dialogue: 0,0:00:15.80,0:00:15.97,Cap,,0,0,0,,TURN OUT {\c&H2BD7FF&}TO{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.97,0:00:16.13,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}BE{\c&HFFFFFF&} A
+Dialogue: 0,0:00:16.13,0:00:16.29,Cap,,0,0,0,,BE {\c&H2BD7FF&}A{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.29,0:00:16.70,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SLIPPERY{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.70,0:00:17.55,Cap,,0,0,0,,{\fs107}{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SPECULATION.{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.55,0:00:17.83,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IT{\c&HFFFFFF&} DID.
+Dialogue: 0,0:00:17.83,0:00:18.25,Cap,,0,0,0,,IT {\c&H2BD7FF&}DID.{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.25,0:00:18.42,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}THE{\c&HFFFFFF&} ICE
+Dialogue: 0,0:00:18.42,0:00:18.60,Cap,,0,0,0,,THE {\c&H2BD7FF&}ICE{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.60,0:00:19.15,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ARRIVED,{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.15,0:00:19.32,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}BUT{\c&HFFFFFF&} THERE
+Dialogue: 0,0:00:19.32,0:00:19.50,Cap,,0,0,0,,BUT {\c&H2BD7FF&}THERE{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.50,0:00:19.67,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}WAS{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.67,0:00:19.98,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}NOWHERE{\c&HFFFFFF&} TO
+Dialogue: 0,0:00:19.98,0:00:20.15,Cap,,0,0,0,,NOWHERE {\c&H2BD7FF&}TO{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.15,0:00:20.33,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}KEEP{\c&HFFFFFF&} IT,
+Dialogue: 0,0:00:20.33,0:00:20.62,Cap,,0,0,0,,KEEP {\c&H2BD7FF&}IT,{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.62,0:00:20.80,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AND{\c&HFFFFFF&} NOBODY
+Dialogue: 0,0:00:20.80,0:00:21.23,Cap,,0,0,0,,AND {\c&H2BD7FF&}NOBODY{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.23,0:00:21.41,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}KNEW{\c&HFFFFFF&} WHAT
+Dialogue: 0,0:00:21.41,0:00:21.58,Cap,,0,0,0,,KNEW {\c&H2BD7FF&}WHAT{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.58,0:00:21.76,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TO{\c&HFFFFFF&} DO WITH
+Dialogue: 0,0:00:21.76,0:00:21.93,Cap,,0,0,0,,TO {\c&H2BD7FF&}DO{\c&HFFFFFF&} WITH
+Dialogue: 0,0:00:21.93,0:00:22.11,Cap,,0,0,0,,TO DO {\c&H2BD7FF&}WITH{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.11,0:00:22.42,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IT.{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.42,0:00:22.62,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IT{\c&HFFFFFF&} MELTED
+Dialogue: 0,0:00:22.62,0:00:22.97,Cap,,0,0,0,,IT {\c&H2BD7FF&}MELTED{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.97,0:00:23.45,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AWAY.{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.45,0:00:23.83,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TUDOR{\c&HFFFFFF&} LOST
+Dialogue: 0,0:00:23.83,0:00:24.05,Cap,,0,0,0,,TUDOR {\c&H2BD7FF&}LOST{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.05,0:00:24.44,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ABOUT{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.44,0:00:25.75,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}$4,000.{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.75,0:00:25.92,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HE{\c&HFFFFFF&} TRIED
+Dialogue: 0,0:00:25.92,0:00:26.09,Cap,,0,0,0,,HE {\c&H2BD7FF&}TRIED{\c&HFFFFFF&}
+Dialogue: 0,0:00:26.09,0:00:26.50,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AGAIN,{\c&HFFFFFF&}
+Dialogue: 0,0:00:26.50,0:00:26.67,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AND{\c&HFFFFFF&} LOST
+Dialogue: 0,0:00:26.67,0:00:26.85,Cap,,0,0,0,,AND {\c&H2BD7FF&}LOST{\c&HFFFFFF&}
+Dialogue: 0,0:00:26.85,0:00:27.29,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AGAIN.{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.29,0:00:27.50,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}BY{\c&HFFFFFF&} 1813,
+Dialogue: 0,0:00:27.50,0:00:28.34,Cap,,0,0,0,,BY {\c&H2BD7FF&}1813,{\c&HFFFFFF&}
+Dialogue: 0,0:00:28.34,0:00:28.56,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HE{\c&HFFFFFF&} HAD BEEN
+Dialogue: 0,0:00:28.56,0:00:28.77,Cap,,0,0,0,,HE {\c&H2BD7FF&}HAD{\c&HFFFFFF&} BEEN
+Dialogue: 0,0:00:28.77,0:00:28.99,Cap,,0,0,0,,HE HAD {\c&H2BD7FF&}BEEN{\c&HFFFFFF&}
+Dialogue: 0,0:00:28.99,0:00:29.36,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}LOCKED{\c&HFFFFFF&} IN
+Dialogue: 0,0:00:29.36,0:00:29.58,Cap,,0,0,0,,LOCKED {\c&H2BD7FF&}IN{\c&HFFFFFF&}
+Dialogue: 0,0:00:29.58,0:00:29.79,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}JAIL{\c&HFFFFFF&} FOR HIS
+Dialogue: 0,0:00:29.79,0:00:30.01,Cap,,0,0,0,,JAIL {\c&H2BD7FF&}FOR{\c&HFFFFFF&} HIS
+Dialogue: 0,0:00:30.01,0:00:30.22,Cap,,0,0,0,,JAIL FOR {\c&H2BD7FF&}HIS{\c&HFFFFFF&}
+Dialogue: 0,0:00:30.22,0:00:30.76,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}DEBTS.{\c&HFFFFFF&}
+Dialogue: 0,0:00:30.76,0:00:30.95,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}YOU{\c&HFFFFFF&} SEE,
+Dialogue: 0,0:00:30.95,0:00:31.27,Cap,,0,0,0,,YOU {\c&H2BD7FF&}SEE,{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.27,0:00:31.46,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}THE{\c&HFFFFFF&} PROBLEM
+Dialogue: 0,0:00:31.46,0:00:31.79,Cap,,0,0,0,,THE {\c&H2BD7FF&}PROBLEM{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.79,0:00:31.98,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}WAS{\c&HFFFFFF&} NEVER
+Dialogue: 0,0:00:31.98,0:00:32.31,Cap,,0,0,0,,WAS {\c&H2BD7FF&}NEVER{\c&HFFFFFF&}
+Dialogue: 0,0:00:32.31,0:00:32.50,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}THE{\c&HFFFFFF&} ICE.
+Dialogue: 0,0:00:32.50,0:00:32.83,Cap,,0,0,0,,THE {\c&H2BD7FF&}ICE.{\c&HFFFFFF&}
+Dialogue: 0,0:00:32.83,0:00:33.19,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}PEOPLE{\c&HFFFFFF&} IN
+Dialogue: 0,0:00:33.19,0:00:33.41,Cap,,0,0,0,,PEOPLE {\c&H2BD7FF&}IN{\c&HFFFFFF&}
+Dialogue: 0,0:00:33.41,0:00:33.62,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HOT{\c&HFFFFFF&} PLACES
+Dialogue: 0,0:00:33.62,0:00:33.99,Cap,,0,0,0,,HOT {\c&H2BD7FF&}PLACES{\c&HFFFFFF&}
+Dialogue: 0,0:00:33.99,0:00:34.20,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HAD{\c&HFFFFFF&} NEVER
+Dialogue: 0,0:00:34.20,0:00:34.57,Cap,,0,0,0,,HAD {\c&H2BD7FF&}NEVER{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.57,0:00:34.78,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HAD{\c&HFFFFFF&} A COLD
+Dialogue: 0,0:00:34.78,0:00:34.99,Cap,,0,0,0,,HAD {\c&H2BD7FF&}A{\c&HFFFFFF&} COLD
+Dialogue: 0,0:00:34.99,0:00:35.20,Cap,,0,0,0,,HAD A {\c&H2BD7FF&}COLD{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.20,0:00:35.56,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}DRINK.{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.56,0:00:35.74,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}YOU{\c&HFFFFFF&} CAN'T
+Dialogue: 0,0:00:35.74,0:00:35.93,Cap,,0,0,0,,YOU {\c&H2BD7FF&}CAN'T{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.93,0:00:36.12,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}MISS{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.12,0:00:36.58,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SOMETHING{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.58,0:00:36.77,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}YOU'VE{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.77,0:00:37.10,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}NEVER{\c&HFFFFFF&}
+Dialogue: 0,0:00:37.10,0:00:37.74,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TASTED.{\c&HFFFFFF&}
+Dialogue: 0,0:00:37.74,0:00:37.95,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SO{\c&HFFFFFF&} TUDOR
+Dialogue: 0,0:00:37.95,0:00:38.32,Cap,,0,0,0,,SO {\c&H2BD7FF&}TUDOR{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.32,0:00:38.69,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}STOPPED{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.69,0:00:39.06,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SELLING{\c&HFFFFFF&} ICE,
+Dialogue: 0,0:00:39.06,0:00:39.41,Cap,,0,0,0,,SELLING {\c&H2BD7FF&}ICE,{\c&HFFFFFF&}
+Dialogue: 0,0:00:39.41,0:00:39.62,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AND{\c&HFFFFFF&} STARTED
+Dialogue: 0,0:00:39.62,0:00:39.99,Cap,,0,0,0,,AND {\c&H2BD7FF&}STARTED{\c&HFFFFFF&}
+Dialogue: 0,0:00:39.99,0:00:40.36,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SELLING{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.36,0:00:40.71,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}COLD.{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.71,0:00:40.92,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HE{\c&HFFFFFF&} BUILT
+Dialogue: 0,0:00:40.92,0:00:41.12,Cap,,0,0,0,,HE {\c&H2BD7FF&}BUILT{\c&HFFFFFF&}
+Dialogue: 0,0:00:41.12,0:00:41.79,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ICEHOUSES{\c&HFFFFFF&} IN
+Dialogue: 0,0:00:41.79,0:00:42.00,Cap,,0,0,0,,ICEHOUSES {\c&H2BD7FF&}IN{\c&HFFFFFF&}
+Dialogue: 0,0:00:42.00,0:00:42.21,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HOT{\c&HFFFFFF&} PORTS.
+Dialogue: 0,0:00:42.21,0:00:42.56,Cap,,0,0,0,,HOT {\c&H2BD7FF&}PORTS.{\c&HFFFFFF&}
+Dialogue: 0,0:00:42.56,0:00:42.77,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HE{\c&HFFFFFF&} PACKED
+Dialogue: 0,0:00:42.77,0:00:43.15,Cap,,0,0,0,,HE {\c&H2BD7FF&}PACKED{\c&HFFFFFF&}
+Dialogue: 0,0:00:43.15,0:00:43.37,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HIS{\c&HFFFFFF&} ICE IN
+Dialogue: 0,0:00:43.37,0:00:43.59,Cap,,0,0,0,,HIS {\c&H2BD7FF&}ICE{\c&HFFFFFF&} IN
+Dialogue: 0,0:00:43.59,0:00:43.81,Cap,,0,0,0,,HIS ICE {\c&H2BD7FF&}IN{\c&HFFFFFF&}
+Dialogue: 0,0:00:43.81,0:00:44.34,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SAWDUST,{\c&HFFFFFF&}
+Dialogue: 0,0:00:44.34,0:00:44.55,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}FREE{\c&HFFFFFF&} TRASH
+Dialogue: 0,0:00:44.55,0:00:44.77,Cap,,0,0,0,,FREE {\c&H2BD7FF&}TRASH{\c&HFFFFFF&}
+Dialogue: 0,0:00:44.77,0:00:44.99,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}FROM{\c&HFFFFFF&}
+Dialogue: 0,0:00:44.99,0:00:45.37,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}LUMBER{\c&HFFFFFF&}
+Dialogue: 0,0:00:45.37,0:00:45.73,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}MILLS.{\c&HFFFFFF&}
+Dialogue: 0,0:00:45.73,0:00:45.95,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}AND{\c&HFFFFFF&} HE GAVE
+Dialogue: 0,0:00:45.95,0:00:46.16,Cap,,0,0,0,,AND {\c&H2BD7FF&}HE{\c&HFFFFFF&} GAVE
+Dialogue: 0,0:00:46.16,0:00:46.38,Cap,,0,0,0,,AND HE {\c&H2BD7FF&}GAVE{\c&HFFFFFF&}
+Dialogue: 0,0:00:46.38,0:00:46.92,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}BARTENDERS{\c&HFFFFFF&}
+Dialogue: 0,0:00:46.92,0:00:47.14,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ICE{\c&HFFFFFF&} FOR FREE,
+Dialogue: 0,0:00:47.14,0:00:47.35,Cap,,0,0,0,,ICE {\c&H2BD7FF&}FOR{\c&HFFFFFF&} FREE,
+Dialogue: 0,0:00:47.35,0:00:47.71,Cap,,0,0,0,,ICE FOR {\c&H2BD7FF&}FREE,{\c&HFFFFFF&}
+Dialogue: 0,0:00:47.71,0:00:48.09,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}UNTIL{\c&HFFFFFF&} THEIR
+Dialogue: 0,0:00:48.09,0:00:48.31,Cap,,0,0,0,,UNTIL {\c&H2BD7FF&}THEIR{\c&HFFFFFF&}
+Dialogue: 0,0:00:48.31,0:00:48.85,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}CUSTOMERS{\c&HFFFFFF&}
+Dialogue: 0,0:00:48.85,0:00:49.06,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}GOT{\c&HFFFFFF&} HOOKED
+Dialogue: 0,0:00:49.06,0:00:49.44,Cap,,0,0,0,,GOT {\c&H2BD7FF&}HOOKED{\c&HFFFFFF&}
+Dialogue: 0,0:00:49.44,0:00:49.66,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ON{\c&HFFFFFF&} COLD
+Dialogue: 0,0:00:49.66,0:00:49.88,Cap,,0,0,0,,ON {\c&H2BD7FF&}COLD{\c&HFFFFFF&}
+Dialogue: 0,0:00:49.88,0:00:50.41,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}DRINKS.{\c&HFFFFFF&}
+Dialogue: 0,0:00:50.41,0:00:50.61,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IN{\c&HFFFFFF&} 1833,
+Dialogue: 0,0:00:50.61,0:00:51.58,Cap,,0,0,0,,IN {\c&H2BD7FF&}1833,{\c&HFFFFFF&}
+Dialogue: 0,0:00:51.58,0:00:51.78,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HE{\c&HFFFFFF&} SENT 180
+Dialogue: 0,0:00:51.78,0:00:51.97,Cap,,0,0,0,,HE {\c&H2BD7FF&}SENT{\c&HFFFFFF&} 180
+Dialogue: 0,0:00:51.97,0:00:53.06,Cap,,0,0,0,,HE SENT {\c&H2BD7FF&}180{\c&HFFFFFF&}
+Dialogue: 0,0:00:53.06,0:00:53.26,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TONS{\c&HFFFFFF&} OF ICE
+Dialogue: 0,0:00:53.26,0:00:53.45,Cap,,0,0,0,,TONS {\c&H2BD7FF&}OF{\c&HFFFFFF&} ICE
+Dialogue: 0,0:00:53.45,0:00:53.65,Cap,,0,0,0,,TONS OF {\c&H2BD7FF&}ICE{\c&HFFFFFF&}
+Dialogue: 0,0:00:53.65,0:00:53.85,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ON{\c&HFFFFFF&} A
+Dialogue: 0,0:00:53.85,0:00:54.05,Cap,,0,0,0,,ON {\c&H2BD7FF&}A{\c&HFFFFFF&}
+Dialogue: 0,0:00:54.05,0:00:54.39,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}FOUR-MONTH{\c&HFFFFFF&}
+Dialogue: 0,0:00:54.39,0:00:54.59,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}TRIP{\c&HFFFFFF&} TO
+Dialogue: 0,0:00:54.59,0:00:54.79,Cap,,0,0,0,,TRIP {\c&H2BD7FF&}TO{\c&HFFFFFF&}
+Dialogue: 0,0:00:54.79,0:00:55.27,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}INDIA.{\c&HFFFFFF&}
+Dialogue: 0,0:00:55.27,0:00:55.58,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ABOUT{\c&HFFFFFF&}
+Dialogue: 0,0:00:55.58,0:00:56.23,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}100 TONS{\c&HFFFFFF&}
+Dialogue: 0,0:00:56.23,0:00:56.41,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}MADE{\c&HFFFFFF&} IT.
+Dialogue: 0,0:00:56.41,0:00:56.90,Cap,,0,0,0,,MADE {\c&H2BD7FF&}IT.{\c&HFFFFFF&}
+Dialogue: 0,0:00:56.90,0:00:57.18,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}HE{\c&HFFFFFF&} DIED RICH.
+Dialogue: 0,0:00:57.18,0:00:57.45,Cap,,0,0,0,,HE {\c&H2BD7FF&}DIED{\c&HFFFFFF&} RICH.
+Dialogue: 0,0:00:57.45,0:00:57.86,Cap,,0,0,0,,HE DIED {\c&H2BD7FF&}RICH.{\c&HFFFFFF&}
+Dialogue: 0,0:00:57.86,0:00:58.18,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}PEOPLE{\c&HFFFFFF&}
+Dialogue: 0,0:00:58.18,0:00:58.50,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}CALLED{\c&HFFFFFF&} HIM
+Dialogue: 0,0:00:58.50,0:00:58.69,Cap,,0,0,0,,CALLED {\c&H2BD7FF&}HIM{\c&HFFFFFF&}
+Dialogue: 0,0:00:58.69,0:00:58.87,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}THE{\c&HFFFFFF&} ICE KING.
+Dialogue: 0,0:00:58.87,0:00:59.05,Cap,,0,0,0,,THE {\c&H2BD7FF&}ICE{\c&HFFFFFF&} KING.
+Dialogue: 0,0:00:59.05,0:00:59.56,Cap,,0,0,0,,THE ICE {\c&H2BD7FF&}KING.{\c&HFFFFFF&}
+Dialogue: 0,0:00:59.56,0:00:59.74,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}SO{\c&HFFFFFF&} THAT
+Dialogue: 0,0:00:59.74,0:00:59.92,Cap,,0,0,0,,SO {\c&H2BD7FF&}THAT{\c&HFFFFFF&}
+Dialogue: 0,0:00:59.92,0:01:00.38,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}NEWSPAPER{\c&HFFFFFF&}
+Dialogue: 0,0:01:00.38,0:01:00.56,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}WAS{\c&HFFFFFF&} RIGHT
+Dialogue: 0,0:01:00.56,0:01:00.75,Cap,,0,0,0,,WAS {\c&H2BD7FF&}RIGHT{\c&HFFFFFF&}
+Dialogue: 0,0:01:00.75,0:01:00.93,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}ALL{\c&HFFFFFF&} ALONG.
+Dialogue: 0,0:01:00.93,0:01:01.39,Cap,,0,0,0,,ALL {\c&H2BD7FF&}ALONG.{\c&HFFFFFF&}
+Dialogue: 0,0:01:01.39,0:01:01.60,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}IT{\c&HFFFFFF&} REALLY
+Dialogue: 0,0:01:01.60,0:01:01.97,Cap,,0,0,0,,IT {\c&H2BD7FF&}REALLY{\c&HFFFFFF&}
+Dialogue: 0,0:01:01.97,0:01:02.19,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}WAS{\c&HFFFFFF&} NO
+Dialogue: 0,0:01:02.19,0:01:02.40,Cap,,0,0,0,,WAS {\c&H2BD7FF&}NO{\c&HFFFFFF&}
+Dialogue: 0,0:01:02.40,0:01:02.96,Cap,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H2BD7FF&}JOKE.{\c&HFFFFFF&}

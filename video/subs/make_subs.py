@@ -22,12 +22,26 @@ for ln in L:
         words.append(dict(w=t, s=s, e=e, end_sent=False))
     words[-1]["end_sent"] = True
 
-# show the year as digits
+# show years and numbers as digits: spoken word runs -> one display token (timed across the run)
+SPOKEN = [
+    (["thirteen", "eighty-six"], "1386"),
+    (["eighteen-oh-six"], "1806"),
+    (["eighteen-thirteen"], "1813"),
+    (["eighteen", "thirty-three"], "1833"),
+    (["a", "hundred", "and", "eighty"], "180"),
+    (["four", "thousand", "dollars"], "$4,000"),
+    (["a", "hundred", "tons"], "100 tons"),
+]
+norm = lambda w: re.sub(r"[^a-z\-]", "", w.lower())
 i = 0
-while i < len(words) - 1:
-    if words[i]["w"].lower() == "thirteen" and words[i+1]["w"].lower().startswith("eighty-six"):
-        words[i] = dict(w="1386" + words[i+1]["w"][len("eighty-six"):], s=words[i]["s"], e=words[i+1]["e"], end_sent=words[i+1]["end_sent"])
-        del words[i+1]
+while i < len(words):
+    for seq, disp in SPOKEN:
+        n = len(seq)
+        if [norm(x["w"]) for x in words[i:i + n]] == seq:
+            last = words[i + n - 1]
+            tail = re.sub(r"^[A-Za-z\-]+", "", last["w"])  # keep trailing punctuation
+            words[i:i + n] = [dict(w=disp + tail, s=words[i]["s"], e=last["e"], end_sent=last["end_sent"])]
+            break
     i += 1
 
 # chunks of up to 3 words that fit the frame: measured in the real font (uppercase, 110 px, 10 px outline, 112 % pop)
