@@ -31,6 +31,10 @@ SPOKEN = [
     (["a", "hundred", "and", "eighty"], "180"),
     (["four", "thousand", "dollars"], "$4,000"),
     (["a", "hundred", "tons"], "100 tons"),
+    (["nineteen", "ninety-five"], "1995"),
+    (["nineteen", "ninety-seven"], "1997"),
+    (["four", "hundred", "and", "seventy", "million"], "470 million"),
+    (["race", "and", "chase"], "Race'n'Chase"),
 ]
 norm = lambda w: re.sub(r"[^a-z\-]", "", w.lower())
 i = 0
