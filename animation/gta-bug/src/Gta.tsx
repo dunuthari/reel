@@ -29,6 +29,7 @@ const useStoryFrame = () => { const f = useCurrentFrame(), { fps } = useVideoCon
 
 /** A/B switches for test stills only (Remotion inputProps `{ post: { ink: false, ... } }`); everything is on by default. */
 type PostToggles = { ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean; mblur: boolean };
+const DOF_SCALE = 0.2;
 const toggles = (): PostToggles => ({ ink: true, lens: true, pre: true, bloom: true, grade: true, grain: false, mblur: true, ...((getInputProps() as { post?: Partial<PostToggles> }).post ?? {}) });
 
 /** Bloom for emissive sources only (depth.md 6.4). Its MIP chain always starts at 540x960 (half of 1080x1920),
@@ -63,7 +64,7 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
     bloom: makeBloom(),
     tone: new ToneMappingEffect({ mode: ToneMappingMode.NEUTRAL }),
     grade: new GradeEffect(GRADES.day, GRADE_STRENGTH.day),
-    mblur: new MotionBlurEffect({ samples: 16, maxPx: 70 }),
+    mblur: new MotionBlurEffect({ samples: 12, maxPx: 8, strength: 0.2 }),
     grain: new GrainEffect({ amount: 0.025, cellPx: 1.5 }), // film grain, OFF by default (inputProps post.grain): the reference measures no grain and it quadruples the file size
   }), [camera, scene]);
   useEffect(() => () => fx.ink.dispose(), [fx]);
@@ -94,7 +95,7 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
   cam.getWorldDirection(fwd);
   if (d.focus) fpt.set(...d.focus(f)); else fpt.copy(target);
   fx.lens.focus = Math.max(0.3, fpt.sub(cam.position).dot(fwd));
-  fx.lens.cInf = d.cInf;
+  fx.lens.cInf = d.cInf * DOF_SCALE; // kept light so every frame reads sharp
   gradeFor(fx.grade, SHOTS[id - 1].light);
   fx.mblur.track(cam, camAt(id, f - 0.25), camAt(id, f + 0.25));
   fx.grain.seed = Math.floor(f); // deterministic per frame
